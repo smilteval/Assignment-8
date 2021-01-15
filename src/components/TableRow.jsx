@@ -1,9 +1,24 @@
-import React from 'react'
+import React from 'react';
+import TableCell from "./TableCell";
 
-export default function TableRow() {
+export default function TableRow(props) {
+
+    let {
+        numCols,
+        color
+    } = props
+
+    let cols = [];
+
+    for(let i = 0; i < numCols; i++){
+        cols.push(
+            <TableCell/>
+        )
+    }
+
     return (
-        <div>
-            <h1>Table Row</h1>
-        </div>
+        <tr>
+            {cols}
+        </tr>
     )
 }
