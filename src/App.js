@@ -20,6 +20,12 @@ export default class App extends Component {
     })
   }
 
+  addCols=()=>{
+    this.setState({
+      numCols: this.state.numCols + 1
+    })
+  }
+
   render() {
     return (
       <div>
@@ -30,6 +36,8 @@ export default class App extends Component {
         />
 
         <button id="add-rows-btn" onClick={this.addRows}>Add Rows</button>
+
+        <button id="add-cols-btn" onClick={this.addCols}>Add Columns</button>
       </div>
     )
   }
