@@ -14,6 +14,12 @@ export default class App extends Component {
     }
   }
 
+  addRows=()=>{
+    this.setState({
+      numRows: this.state.numRows + 1
+    })
+  }
+
   render() {
     return (
       <div>
@@ -22,6 +28,8 @@ export default class App extends Component {
           numCols = {this.state.numCols}
           color = {this.state.color}
         />
+
+        <button id="add-rows-btn" onClick={this.addRows}>Add Rows</button>
       </div>
     )
   }
