@@ -1,5 +1,5 @@
 import './App.css';
-import {Table, TableCell, TableRow} from "./components"
+import Table from "./components/Table"
 
 import React, { Component } from 'react'
 
@@ -10,7 +10,7 @@ export default class App extends Component {
     this.state={
       numRows: 3,
       numCols: 3,
-      cellColor: "",
+      cellColor: " ",
     }
   }
 
@@ -26,6 +26,16 @@ export default class App extends Component {
     })
   }
 
+  selectColor=(event)=>{
+    this.setState({
+      color: event.target.value
+    })
+  }
+
+  handleClick=(event)=>{
+    event.target.style.backgroundColor = this.state.color;
+  }
+
   render() {
     return (
       <div>
@@ -33,6 +43,7 @@ export default class App extends Component {
           numRows = {this.state.numRows}
           numCols = {this.state.numCols}
           color = {this.state.color}
+          handleClick={this.handleClick}
         />
 
         <button id="add-rows-btn" onClick={this.addRows}>Add Rows</button>
@@ -41,8 +52,8 @@ export default class App extends Component {
       
         <div id = "color-selection-panel">
           <h3>Select a color: </h3>
-          <select name="colors" id="color-dropdown" onChange="selectColor(this.value)">
-            <option value=" " selected disabled hidden> Colors </option>
+          <select name="colors" id="color-dropdown" value={this.state.color} onChange={this.selectColor}>
+            <option value=" " disabled hidden> Colors </option>
             <option class="red" value="red">red</option>
             <option class="blue" value="blue">blue</option>
             <option class="green" value="green">green</option>
