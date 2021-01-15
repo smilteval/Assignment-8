@@ -22,7 +22,7 @@ export default function Table(props) {
 
     return (
         <div>
-            <table>
+            <table id = "table">
                 <tbody>
                     {rows}
                 </tbody>
