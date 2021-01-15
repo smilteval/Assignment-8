@@ -1,9 +1,15 @@
 import React from 'react'
 
-export default function TableCell() {
-    return (
-        <td class = "cell">
+export default function TableCell(props) {
+    
+    let{
+        handleClick
+    } = props;
 
-        </td>
+    return (
+        <td 
+            class = "cell"
+            onClick = {handleClick}    
+        ></td>
     )
 }

@@ -5,14 +5,18 @@ export default function TableRow(props) {
 
     let {
         numCols,
-        color
+        color,
+        handleClick,
     } = props
 
     let cols = [];
 
     for(let i = 0; i < numCols; i++){
         cols.push(
-            <TableCell/>
+            <TableCell
+                color={color}
+                handleClick={handleClick}
+            />
         )
     }
 

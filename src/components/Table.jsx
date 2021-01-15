@@ -7,6 +7,7 @@ export default function Table(props) {
         numRows,
         numCols,
         color,
+        handleClick,
     } = props;
 
     let rows = [];
@@ -16,6 +17,7 @@ export default function Table(props) {
             <TableRow 
                 numCols={numCols}
                 color={color}
+                handleClick={handleClick}
             />
         )
     }
