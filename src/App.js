@@ -26,6 +26,12 @@ export default class App extends Component {
     })
   }
 
+  removeRows=()=>{
+    this.setState({
+      numRows: this.state.numRows - 1
+    })
+  }
+
   selectColor=(event)=>{
     this.setState({
       color: event.target.value
@@ -49,6 +55,8 @@ export default class App extends Component {
         <button id="add-rows-btn" onClick={this.addRows}>Add Rows</button>
 
         <button id="add-cols-btn" onClick={this.addCols}>Add Columns</button>
+
+        <button id="remove-rows-btn" onClick={this.removeRows}>Remove Rows</button>
       
         <div id = "color-selection-panel">
           <h3>Select a color: </h3>
