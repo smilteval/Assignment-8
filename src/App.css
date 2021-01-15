@@ -7,3 +7,48 @@
 .cell{
     background-color: blue;
 }
+
+#color-selection-panel{
+    display:flex;
+    margin-top: 1.5em;
+    align-items: center;
+}
+
+select{
+    width: 10em;
+    height: 2em;
+    margin-left: 10px;
+    border-radius: 50px;
+}
+
+.red{
+    background-color: red
+}
+
+.blue{
+    background-color: blue
+}
+
+.green{
+    background-color: green
+}
+
+.yellow{
+    background-color: yellow
+}
+
+.orange{
+    background-color: orange
+}
+
+.purple{
+    background-color: purple
+}
+
+.pink{
+    background-color: pink
+}
+
+.brown{
+    background-color: brown
+}
