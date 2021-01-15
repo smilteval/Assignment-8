@@ -1,4 +1,5 @@
 import React from 'react'
+import TableRow from './TableRow';
 
 export default function Table(props) {
 
@@ -7,10 +8,25 @@ export default function Table(props) {
         numCols,
         color,
     } = props;
-    
+
+    let rows = [];
+
+    for(let i = 0; i < numRows; i++){
+        rows.push(
+            <TableRow 
+                numCols={numCols}
+                color={color}
+            />
+        )
+    }
+
     return (
         <div>
-           <h1>{numRows}</h1> 
+            <table>
+                <tbody>
+                    {rows}
+                </tbody>
+            </table>
         </div>
     )
 }
