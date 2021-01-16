@@ -55,31 +55,30 @@ export default class App extends Component {
           numRows = {this.state.numRows}
           numCols = {this.state.numCols}
           color = {this.state.color}
-          handleClick={this.handleClick}
+          handleClick = {this.handleClick}
         />
 
         <button id="add-rows-btn" onClick={this.addRows}>Add Rows</button>
-
         <button id="add-cols-btn" onClick={this.addCols}>Add Columns</button>
-
         <button id="remove-rows-btn" onClick={this.removeRows}>Remove Rows</button>
-
         <button id="remove-cols-btn" onClick={this.removeCols}>Remove Columns</button>
       
         <div id = "color-selection-panel">
           <h3>Select a color: </h3>
           <select name="colors" id="color-dropdown" value={this.state.color} onChange={this.selectColor}>
-            <option value=" " disabled hidden> Colors </option>
-            <option class="red" value="red">red</option>
-            <option class="blue" value="blue">blue</option>
-            <option class="green" value="green">green</option>
-            <option class="yellow" value="yellow">yellow</option>
-            <option class="orange" value="orange">orange</option>
-            <option class="purple" value="purple">purple</option>
-            <option class="pink" value="pink">pink</option>
-            <option class="brown" value="brown">brown</option>
+            <option value=" " selected disabled hidden> Colors </option>
+            <option className="red" value="red">red</option>
+            <option className="blue" value="blue">blue</option>
+            <option className="green" value="green">green</option>
+            <option className="yellow" value="yellow">yellow</option>
+            <option className="orange" value="orange">orange</option>
+            <option className="purple" value="purple">purple</option>
+            <option className="pink" value="pink">pink</option>
+            <option className="brown" value="brown">brown</option>
           </select>  
         </div>
+
+        <h3>To color one cell, select a color and click on that cell.</h3>
         
       </div>
     )
