@@ -21,7 +21,7 @@ export default function TableRow(props) {
     }
 
     return (
-        <tr class = "row">
+        <tr className = "row">
             {cols}
         </tr>
     )

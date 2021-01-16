@@ -8,7 +8,7 @@ export default function TableCell(props) {
 
     return (
         <td 
-            class = "cell"
+            className = "cell"
             onClick = {handleClick}    
         ></td>
     )
